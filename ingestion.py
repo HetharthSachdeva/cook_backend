@@ -87,7 +87,7 @@ def transcribe_audio(file_path):
         print(f"Error transcribing audio: {e}")
         return []
 
-def split_text(document, chunk_size=1000, chunk_overlap=100):
+def split_text(document, chunk_size=500, chunk_overlap=100):
     """Split document into smaller chunks."""
     try:
         text_splitter = CharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
