@@ -25,7 +25,7 @@ def initialize_chatbot(user_index, collection_name):
     retriever = vectorstore.as_retriever(search_kwargs={"k": 5})  # Retrieve top 5 documents
 
     chat = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         temperature=0,
         google_api_key=os.getenv("GOOGLE_API_KEY"),
         verbose=True
