@@ -12,7 +12,6 @@ from PIL import Image
 import pytesseract
 import io
 import uuid
-from pydantic import SecretStr
 
 load_dotenv()
 
@@ -99,11 +98,11 @@ def split_text(document, chunk_size=500, chunk_overlap=100):
 
 def create_embeddings():
     """Create an embedding model."""
-    google_api_key = os.getenv("GOOGLE_API_KEY")
     try:
         return GoogleGenerativeAIEmbeddings(
-            model="models/text-embedding-gecko-001", 
-            google_api_key=(google_api_key.get_secret_value() if isinstance(google_api_key, SecretStr) else google_api_key)
+            model="models/text-embedding-004", 
+            google_api_key=os.getenv("GOOGLE_API_KEY"),
+            transport="rest" 
         )
     except Exception as e:
         print(f"Error creating embeddings: {e}")
