@@ -61,7 +61,7 @@ COOKGPT was designed to directly map these requirements into a **robust, end-to-
 
 ---
 
-## 🖼️ Application Screenshots
+## 🖼️ Application Showcase
 
 <div align="center">
   <div style="display: flex; justify-content: space-around; gap: 4; ">
@@ -75,12 +75,6 @@ COOKGPT was designed to directly map these requirements into a **robust, end-to-
   </div>
 </div>
 
-```text
-📸 Screenshot 1 – Document Ingestion Interface
-📸 Screenshot 2 – Retrieval & Re-ranking View
-📸 Screenshot 3 – Chatbot Query Response
-
-```
 ---
 
 ## 🧱 System Architecture
@@ -106,4 +100,71 @@ COOKGPT was designed to directly map these requirements into a **robust, end-to-
 │ Transparent Output                 │
 │ Final LLM Response                 │
 └────────────────────────────────────┘
+```
+---
 
+## 🛠️ Tech Stack
+
+- **Programming Language:** Python  
+- **Large Language Models:** Gemini
+- **Retrieval-Augmented Generation:** LangChain
+- **Vector Databases:** Pinecone  
+- **Backend:** Flask  
+- **Frontend:** Web-based UI (React)  
+- **APIs:** RESTful APIs  
+- **Deployment & Tooling:** Git, GitHub  
+
+## 👨‍💻 Team Members
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="/CookGPTLogo.webp" style="border-radius:50%" width="70"/>
+        <b>Hetharth Sachdeva</b><br/>
+        <i>Project Lead & Full-Stack Developer (AI/ML)</i><br/>
+        <a href="https://github.com/sarahjohnson">GitHub</a> • 
+        <a href="https://linkedin.com/in/sarahjohnson">LinkedIn</a>
+      </td>
+      <td align="center">
+        <img src="/CookGPTLogo.webp" style="border-radius:50%" width="70"/>
+        <b>Prince Kumar</b><br/>
+        <i>Full-Stack Developer</i><br/>
+        <a href="https://github.com/davidkim">GitHub</a> • 
+        <a href="https://linkedin.com/in/davidkim">LinkedIn</a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="/CookGPTLogo.webp" style="border-radius:50%" width="70"/>
+        <b>Vedant Dubey</b><br/>
+        <i>Full-Stack Developer</i><br/>
+        <a href="https://github.com/davidkim">GitHub</a> • 
+        <a href="https://linkedin.com/in/davidkim">LinkedIn</a>
+      </td>
+      <td align="center">
+        <img src="/CookGPTLogo.webp" style="border-radius:50%" width="70"/>
+        <b>Mayank Verma</b><br/>
+        <i>Full-Stack Developer</i><br/>
+        <a href="https://github.com/davidkim">GitHub</a> • 
+        <a href="https://linkedin.com/in/davidkim">LinkedIn</a>
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+## 📞 Contact & Support
+
+- **Email**: hetharthsach@gmail.com(Team Leader)
+- **Twitter**: [@CookGPT]()
+- **Support**: [+919818248015]
+
+---
+
+<div align="center">
+  <img src="/CookGPTLogo.webp" alt="Cook GPT Logo" width="50" style="border-radius:50%" height=''/>
+  <h3>Cook GPT - Cooking Reimagined with AI</h3>
+  <p>Made with ❤️ by Team Cookers</p>
+</div>
+![alt text](image.png)
