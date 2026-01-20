@@ -8,7 +8,7 @@ from langchain_google_genai import (
 from langchain_pinecone import PineconeVectorStore
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-from pydantic import SecretStr
+
 
 warnings.filterwarnings("ignore")
 load_dotenv()
@@ -20,17 +20,20 @@ chat_history = {}
 # -----------------------------
 
 def initialize_llm():
-    google_api_key = os.getenv("GOOGLE_API_KEY")
+    print("Initializing Google Generative AI LLM...")
     return ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
         temperature=0,
-        google_api_key=(google_api_key.get_secret_value() if isinstance(google_api_key, SecretStr) else google_api_key)
+        google_api_key=str(os.getenv("GOOGLE_API_KEY")),
+        transport="rest" 
     )
 
 def initialize_vectorstore(user_index, collection_name):
+    print("Initializing Pinecone Vector Store...")
     embeddings = GoogleGenerativeAIEmbeddings(
-        model="models/text-embedding-gecko-001",
-        google_api_key=os.getenv("GOOGLE_API_KEY")
+        model="models/text-embedding-004",
+        google_api_key=str(os.getenv("GOOGLE_API_KEY")),
+        transport="rest" 
     )
 
     return PineconeVectorStore(
@@ -49,7 +52,7 @@ def query_pinecone(query_text, user_index, collection_name):
 
     if collection_name not in chat_history[user_index]:
         chat_history[user_index][collection_name] = []
-
+    print("Querying Pinecone Vector Store...")
     vectorstore = initialize_vectorstore(user_index, collection_name)
 
     # 🔹 ONE embedding call happens here (unavoidable & correct)
